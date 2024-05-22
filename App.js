@@ -7,46 +7,30 @@ import { Ionicons } from "@expo/vector-icons";
 function ProfileScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Image source={require("./assets/Foto.jpeg")} style={styles.image} />
-      <Text style={styles.header}>Emesson Silva</Text>
+      <Image source={require("./assets/jpp.jpeg")} style={styles.image} />
+      <Text style={styles.header}>João Pedro</Text>
       <Text style={styles.subheader}>
-        Analysis and Systems Development Student
+        Estudante de análise e desenvolvimento de sistemas
       </Text>
       <Text style={styles.paragraph}>
-        Hi, I'm Emesson Silva, I'm 21 years old, I'm Analysis and Systems
-        Development Student and I live in the city of Recife - PE.
+        Olá! Meu nome é João Pedro, tenho 19 anos e estudo no Senac através do programa do Embarque Digital
       </Text>
       <Text style={styles.paragraph}>
-        Technologies I've had experience with:
+        Linguagens de programação:
       </Text>
       <Text style={styles.listItem}>
-        • Libraries and Frameworks: React, Angular, Flutter.
-      </Text>
-      <Text style={styles.listItem}>
-        • Programming languages: TypeScript, JavaScript, C, C#.
-      </Text>
-      <Text style={styles.listItem}>• Database: MySQL, MongoDB.</Text>
-      <Text style={styles.listItem}>• Development tools: Git, GitHub.</Text>
-      <Text style={styles.paragraph}>
-        I'm currently looking to enter the I.T. field, either through an
-        internship or another position, with a focus on web development, but I'm
-        not limited to this area and I'm always willing to learn.
+        • Python, HTML, CSS, Javascript, MySQL e C.
       </Text>
       <Text style={styles.paragraph}>
-        You can check out my portfolio at {""}
+        Atualmente procurando trabalho na área de UX Design
+      </Text>
+      <Text style={styles.paragraph}>
+        Veja meus projetos no GitHub {""}
         <Text
           style={styles.link}
-          onPress={() => Linking.openURL("https://emessonblog.netlify.app")}
+          onPress={() => Linking.openURL("https://github.com/Joa1pedr1")}
         >
-          emessonblog.netlify.app
-        </Text>{" "}
-        {""}
-        and explore my work on GitHub at {""}
-        <Text
-          style={styles.link}
-          onPress={() => Linking.openURL("https://github.com/emessonSilva")}
-        >
-          github.com/emessonSilva
+          https://github.com/Joa1pedr1
         </Text>
         .
       </Text>
@@ -57,31 +41,13 @@ function ProfileScreen() {
 function ExperienceScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.header}>Experience</Text>
+      <Text style={styles.header}>Experiência</Text>
       <Text style={styles.subheader}>
-        Bilingual Customer Support Agent at Speed+
+        PIBIC-EM
       </Text>
-      <Text style={styles.paragraph}>• Oct 2023 - Present</Text>
+      <Text style={styles.paragraph}>• Agosto 2020 - Agosto 2022</Text>
       <Text style={styles.paragraph}>
-        • I work just on weekends at the company. There I handle customer
-        tickets for an app called Bolt Food (similar to IFood). The tickets can
-        be complaints, requests, etc. I answer in English or Portuguese.
-      </Text>
-      <Text style={styles.subheader}>
-        Technology Residency at Porto Digital
-      </Text>
-      <Text style={styles.paragraph}>• Mar 2023 - Present</Text>
-      <Text style={styles.paragraph}>
-        • During my degree in Analysis and Systems Development, I take part in
-        projects for real companies every semester.
-      </Text>
-      <Text style={styles.subheader}>DIO Campus Expert at DIO</Text>
-      <Text style={styles.paragraph}>• Mar 2024 - April 2024</Text>
-      <Text style={styles.paragraph}>
-        • I was one of those chosen for the seventh edition of the program,
-        which aims to train university leaders through mentoring and practical
-        activities, preparing students to inspire the next generation of tech
-        talent.
+        • Conquistei uma bolsa de iniciação à iniciação científica na UFPE, cujo objetivo da minha pesquisa era o de desenvolver um dosador automático de álcool em gel.
       </Text>
     </ScrollView>
   );
@@ -90,16 +56,12 @@ function ExperienceScreen() {
 function EducationScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.header}>Education</Text>
+      <Text style={styles.header}>Educação</Text>
       <Text style={styles.subheader}>
-        Degree in Analysis and Systems Development
+        Curso de análise e desenvolvimento de sistema
       </Text>
       <Text style={styles.paragraph}>
-        Secac Pernambuco College, Mar 2023 - Present.
-      </Text>
-      <Text style={styles.subheader}>Accelerated Training in Programming</Text>
-      <Text style={styles.paragraph}>
-        Softex Pernambuco, Jun 2023 - Jan 2024.
+        Senac, Mar 2023 - Present.
       </Text>
     </ScrollView>
   );
@@ -116,17 +78,17 @@ export default function App() {
             let iconName;
 
             if (route.name === "Profile") {
-              iconName = focused ? "person" : "person-outline";
+              iconName = focused ? "accessibility" : "accessibility-outline";
             } else if (route.name === "Experience") {
-              iconName = focused ? "briefcase" : "briefcase-outline";
+              iconName = focused ? "code-slash" : "code-slash-outline";
             } else if (route.name === "Education") {
-              iconName = focused ? "school" : "school-outline";
+              iconName = focused ? "desktop" : "desktop-outline";
             }
 
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: "#008080",
-          tabBarInactiveTintColor: "gray",
+          tabBarActiveTintColor: "#0CC0DF",
+          tabBarInactiveTintColor: "#38B6FF",
           tabBarStyle: {
             backgroundColor: "#f8f8f8",
             borderTopWidth: 0,
@@ -144,7 +106,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#DBF5F6",
     paddingHorizontal: 20,
     paddingVertical: 30,
   },
